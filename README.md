@@ -35,7 +35,7 @@ TROUBLESHOOTING: <br />
 CAMERA CODE: <br />
  INSTRUCTIONS: <br />
  
-    1. Connect the robot to a power source and make sure it cannot damage itself or anything around in the rare occasion that the connection breaks and servos continue to move.
+   1. Connect the robot to a power source and make sure it cannot damage itself or anything around in the rare occasion that the connection breaks and servos continue to move.
    2. Sign into the Laptop. Make sure you are connected to the correct robot's access point, this will take a few moments as the robot boots up and runs some preliminary files to establish an access point. It is important you access the right robot.
    3. Open two(2) terminal window. This is referred to as TW1 and TW2 respectively.
    4. Within TW1 you will need to navigate to the file RCDC. This can be done by entering "cd Desktop/RoboCup-2018-Driving-Code"
@@ -45,6 +45,6 @@ CAMERA CODE: <br />
    8. After navigating to Wless_code_RC18 you will be required to run the script "bash Start_PiStream.sh". After running this, the MacStream cache will fill up. If you chose to pipe the stream into a python file, you will not see the cache fill, but after a few seconds, a window will pop up with the chosen vision.
    
  TROUBLESHOOTING: <br />
-   Large amount of lag:
-     If this happens, within the code on the robot, decrease the frame rate and the size of each frame being sent. The lowest advised setting for frame rate is 10 fps and the lowest advised resolution for each frame is 720 x 480
+   Large amount of lag: <br />
+     If this happens, within the code on the robot, decrease the frame rate and the size of each frame being sent. The lowest advised setting for frame rate is 10 fps and the lowest advised resolution for each frame is 720 x 480. <br />
    
