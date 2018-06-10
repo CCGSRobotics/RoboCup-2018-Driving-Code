@@ -1,0 +1,31 @@
+your gamepad is: device /dev/input/event12, name "Logitech Gamepad F310", phys "usb-0000:00:1a.7-1.3/input0"
+connect setup
+trying to establish a connection
+connect ready
+<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.100.72', 42578), raddr=('192.168.100.1', 9999)>
+Arm setup
+Arm Class Defined
+Flipper Class Defined
+Vroom Vroom!
+your gamepad is: device /dev/input/event12, name "Logitech Gamepad F310", phys "usb-0000:00:1a.7-1.3/input0"
+connect setup
+trying to establish a connection
+connect ready
+<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.100.72', 42580), raddr=('192.168.100.1', 9999)>
+Arm setup
+Arm Class Defined
+Flipper Class Defined
+Vroom Vroom!
+sdfhjkkhjgkghkjdfjkh
+sdfhjkkhjgkghkjdfjkh
+sdfhjkkhjgkghkjdfjkh
+sdfhjkkhjgkghkjdfjkh
+your gamepad is: device /dev/input/event12, name "Logitech Gamepad F310", phys "usb-0000:00:1a.7-1.3/input0"
+connect setup
+trying to establish a connection
+connect ready
+<socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.100.72', 42582), raddr=('192.168.100.1', 9999)>
+Arm setup
+Arm Class Defined
+Flipper Class Defined
+Vroom Vroom!
