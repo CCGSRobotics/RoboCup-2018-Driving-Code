@@ -9,7 +9,7 @@ DRIVING CODE:
  LAPTOP: <br />
    The RoboCup-2018-Driving-Code (RCDC) is used by the laptop. You will need to access the file within RCDC that describes the robot you require to drive
   
- INSTRUCTIONS:
+ INSTRUCTIONS: <br />
     
    1. Connect the robot to a power source and make sure it cannot damage itself or anything around in the rare occasion that the connection breaks and servos continue to move.
    2. Sign into the Laptop. Make sure you are connected to the correct robot's access point, this will take a few moments as the robot boots up and runs some preliminary files to establish an access point. It is important you access the right robot.
@@ -21,15 +21,15 @@ DRIVING CODE:
    8. Within this file you will find a pythin script named client.py. Open this file and run the code. NOTE: You are required to have a controller connected to the laptop otherwise an error will be raised.
    9. See below for debugging statements.
   
-TROUBLESHOOTING:
- When running robot code:
-  Incomplete packet:
-   Make sure servos are recieving power and connected to the USB2AX
-  Wrong Header:
-   Source is unknown. Run the code multiple times until the error stops working. If repeated more than 10 times, reboot the robot, make sure all cables are plugged in and all hardware is recieving necesssary power requirements.
-  Broken Joint or Broken Wheel:
-   A number of servos would have broken. The ID will be displayed on the screen. The most common reason of this is if too much torque experienced by the servo. This is fixed by turning the servos on and off. If this error continues with no pressure on the servo, this servo will be required to be replaced.
- When running laptop code:
-  Broken Pipe error:
-   Make sure the robot's code is still running and does not contain print statments describing which joint or wheel is broken. See above "Broken Joint or Broken Wheel" after quitting the code and before repeating steps 6 and 8.
+TROUBLESHOOTING: <br />
+ When running robot code: <br />
+  Incomplete packet: <br />
+   Make sure servos are recieving power and connected to the USB2AX <br />
+  Wrong Header: <br />
+   Source is unknown. Run the code multiple times until the error stops working. If repeated more than 10 times, reboot the robot, make sure all cables are plugged in and all hardware is recieving necesssary power requirements. <br />
+  Broken Joint or Broken Wheel: <br />
+   A number of servos would have broken. The ID will be displayed on the screen. The most common reason of this is if too much torque experienced by the servo. This is fixed by turning the servos on and off. If this error continues with no pressure on the servo, this servo will be required to be replaced. <br />
+ When running laptop code: <br />
+  Broken Pipe error: <br />
+   Make sure the robot's code is still running and does not contain print statments describing which joint or wheel is broken. See above "Broken Joint or Broken Wheel" after quitting the code and before repeating steps 6 and 8. <br />
     
