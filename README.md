@@ -3,10 +3,10 @@ This is the final edit of the code that the King's Legacy team will be using dur
 ----------------------------------------------------------------------------------------------------------------------------
 DRIVING CODE:
 
- ROBOT:
+ ROBOT: <br />
    Wireless code is put on the robot that is being controlled. It does not matter which robot it will be uploaded to, BUT you will need to edit which mode each servo is at the beginning of the RoboCupServer-Current.py file.
 
- LAPTOP:
+ LAPTOP: <br />
    The RoboCup-2018-Driving-Code (RCDC) is used by the laptop. You will need to access the file within RCDC that describes the robot you require to drive
   
  INSTRUCTIONS:
