@@ -2,13 +2,13 @@
 This is the final edit of the code that the King's Legacy team will be using during the RoboCup Rapidly Manufactured Robotics League, Montreal, 2018 
 ----------------------------------------------------------------------------------------------------------------------------
 DRIVING CODE:
-  ROBOT:
-    Wireless code is put on the robot that is being controlled. It does not matter which robot it will be uploaded to, BUT you     will need to edit which mode each servo is at the beginning of the RoboCupServer-Current.py file.
+ ROBOT:
+   Wireless code is put on the robot that is being controlled. It does not matter which robot it will be uploaded to, BUT you will need to edit which mode each servo is at the beginning of the RoboCupServer-Current.py file.
 
-  LAPTOP:
-    The RoboCup-2018-Driving-Code (RCDC) is used by the laptop. You will need to access the file within RCDC that describes the robot you require to drive
+ LAPTOP:
+   The RoboCup-2018-Driving-Code (RCDC) is used by the laptop. You will need to access the file within RCDC that describes the robot you require to drive
   
-  INSTRUCTIONS:
+ INSTRUCTIONS:
     
    1. Connect the robot to a power source and make sure it cannot damage itself or anything around in the rare occasion that the connection breaks and servos continue to move.
    2. Sign into the Laptop. Make sure you are connected to the correct robot's access point, this will take a few moments as the robot boots up and runs some preliminary files to establish an access point. It is important you access the right robot.
