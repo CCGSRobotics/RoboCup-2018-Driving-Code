@@ -45,6 +45,6 @@ CAMERA CODE: <br />
    8. After navigating to Wless_code_RC18 you will be required to run the script "bash Start_PiStream.sh". After running this, the MacStream cache will fill up. If you chose to pipe the stream into a python file, you will not see the cache fill, but after a few seconds, a window will pop up with the chosen vision.
    
  TROUBLESHOOTING: <br />
-   Large amount of lag: <br />
-     If this happens, within the code on the robot, decrease the frame rate and the size of each frame being sent. The lowest advised setting for frame rate is 10 fps and the lowest advised resolution for each frame is 720 x 480. <br />
+   - Large amount of lag: <br />
+     - If this happens, within the code on the robot, decrease the frame rate and the size of each frame being sent. The lowest advised setting for frame rate is 10 fps and the lowest advised resolution for each frame is 720 x 480. <br />
    
