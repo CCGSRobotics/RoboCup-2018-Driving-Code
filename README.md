@@ -1,14 +1,14 @@
 # FinalDrivingCodeForMontreal
 This is the final edit of the code that the King's Legacy team will be using during the RoboCup Rapidly Manufactured Robotics League, Montreal, 2018 
 ----------------------------------------------------------------------------------------------------------------------------
-##DRIVING CODE: <br />
- #####ROBOT: <br />
+## DRIVING CODE: <br />
+ ##### ROBOT: <br />
    Wireless code is put on the robot that is being controlled. It does not matter which robot it will be uploaded to, BUT you will need to edit which mode each servo is at the beginning of the RoboCupServer-Current.py file.
 
- #####LAPTOP: <br />
+ ##### LAPTOP: <br />
    The RoboCup-2018-Driving-Code (RCDC) is used by the laptop. You will need to access the file within RCDC that describes the robot you require to drive
   
- #####INSTRUCTIONS: <br />
+ ##### INSTRUCTIONS: <br />
    1. Connect the robot to a power source and make sure it cannot damage itself or anything around in the rare occasion that the connection breaks and servos continue to move.
    2. Sign into the Laptop. Make sure you are connected to the correct robot's access point, this will take a few moments as the robot boots up and runs some preliminary files to establish an access point. It is important you access the right robot.
    3. Open one(1) terminal window. This is referred to as TW1.
@@ -19,7 +19,7 @@ This is the final edit of the code that the King's Legacy team will be using dur
    8. Within this file you will find a pythin script named client.py. Open this file and run the code. NOTE: You are required to have a controller connected to the laptop otherwise an error will be raised.
    9. See below for debugging statements.
   
-######TROUBLESHOOTING: <br />
+###### TROUBLESHOOTING: <br />
   - When running robot code: <br />
     - Incomplete packet: <br />
       - Make sure servos are recieving power and connected to the USB2AX <br />
@@ -32,8 +32,8 @@ This is the final edit of the code that the King's Legacy team will be using dur
       - Make sure the robot's code is still running and does not contain print statments describing which joint or wheel is broken. See above "Broken Joint or Broken Wheel" after quitting the code and before repeating steps 6 and 8. <br />
  
 
-##CAMERA CODE: <br />
- #####INSTRUCTIONS: <br />
+## CAMERA CODE: <br />
+ ##### INSTRUCTIONS: <br />
  
    1. Connect the robot to a power source and make sure it cannot damage itself or anything around in the rare occasion that the connection breaks and servos continue to move.
    2. Sign into the Laptop. Make sure you are connected to the correct robot's access point, this will take a few moments as the robot boots up and runs some preliminary files to establish an access point. It is important you access the right robot.
@@ -44,7 +44,7 @@ This is the final edit of the code that the King's Legacy team will be using dur
    7. Then enter "cd Desktop/Wless_code_RC18". This may be different depending on where you saved the file Wless_code_RC18
    8. After navigating to Wless_code_RC18 you will be required to run the script "bash Start_PiStream.sh". After running this, the MacStream cache will fill up. If you chose to pipe the stream into a python file, you will not see the cache fill, but after a few seconds, a window will pop up with the chosen vision.
    
- ######TROUBLESHOOTING: <br />
+ ###### TROUBLESHOOTING: <br />
    - Large amount of lag: <br />
      - If this happens, within the code on the robot, decrease the frame rate and the size of each frame being sent. The lowest advised setting for frame rate is 10 fps and the lowest advised resolution for each frame is 720 x 480. <br />
    
