@@ -20,14 +20,14 @@ DRIVING CODE: <br />
    9. See below for debugging statements.
   
 TROUBLESHOOTING: <br />
-  When running robot code: <br />
-    Incomplete packet: <br />
-      Make sure servos are recieving power and connected to the USB2AX <br />
-    Wrong Header: <br />
-      Source is unknown. Run the code multiple times until the error stops working. If repeated more than 10 times, reboot the robot, make sure all cables are plugged in and all hardware is recieving necesssary power requirements. <br />
-    Broken Joint or Broken Wheel: <br />
-      A number of servos would have broken. The ID will be displayed on the screen. The most common reason of this is if too much torque experienced by the servo. This is fixed by turning the servos on and off. If this error continues with no pressure on the servo, this servo will be required to be replaced. <br />
-  When running laptop code: <br />
-    Broken Pipe error: <br />
-      Make sure the robot's code is still running and does not contain print statments describing which joint or wheel is broken. See above "Broken Joint or Broken Wheel" after quitting the code and before repeating steps 6 and 8. <br />
+  - When running robot code: <br />
+    - Incomplete packet: <br />
+      - Make sure servos are recieving power and connected to the USB2AX <br />
+    - Wrong Header: <br />
+      - Source is unknown. Run the code multiple times until the error stops working. If repeated more than 10 times, reboot the robot, make sure all cables are plugged in and all hardware is recieving necesssary power requirements. <br />
+    - Broken Joint or Broken Wheel: <br />
+      - A number of servos would have broken. The ID will be displayed on the screen. The most common reason of this is if too much torque experienced by the servo. This is fixed by turning the servos on and off. If this error continues with no pressure on the servo, this servo will be required to be replaced. <br />
+  - When running laptop code: <br />
+    - Broken Pipe error: <br />
+      - Make sure the robot's code is still running and does not contain print statments describing which joint or wheel is broken. See above "Broken Joint or Broken Wheel" after quitting the code and before repeating steps 6 and 8. <br />
     
