@@ -1,7 +1,7 @@
 # FinalDrivingCodeForMontreal
 This is the final edit of the code that the King's Legacy team will be using during the RoboCup Rapidly Manufactured Robotics League, Montreal, 2018 
 ----------------------------------------------------------------------------------------------------------------------------
-DRIVING CODE: /n
+DRIVING CODE: \n
  ROBOT:
    Wireless code is put on the robot that is being controlled. It does not matter which robot it will be uploaded to, BUT you will need to edit which mode each servo is at the beginning of the RoboCupServer-Current.py file.
 
