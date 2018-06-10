@@ -30,4 +30,19 @@ TROUBLESHOOTING: <br />
   - When running laptop code: <br />
     - Broken Pipe error: <br />
       - Make sure the robot's code is still running and does not contain print statments describing which joint or wheel is broken. See above "Broken Joint or Broken Wheel" after quitting the code and before repeating steps 6 and 8. <br />
-    
+ 
+
+CAMERA CODE: <br />
+ INSTRUCTIONS: <br />
+    1. Connect the robot to a power source and make sure it cannot damage itself or anything around in the rare occasion that the connection breaks and servos continue to move.
+   2. Sign into the Laptop. Make sure you are connected to the correct robot's access point, this will take a few moments as the robot boots up and runs some preliminary files to establish an access point. It is important you access the right robot.
+   3. Open two(2) terminal window. This is referred to as TW1 and TW2 respectively.
+   4. Within TW1 you will need to navigate to the file RCDC. This can be done by entering "cd Desktop/RoboCup-2018-Driving-Code"
+   5. For a clear view of what the robot currently sees, enter "bash Start_MacStream_MVidPlayer.sh". If you require to find a QRCode or Motion detection, enter "bash Start_MacStream.sh | python *enter script of python file here*"
+   6. Within TW2 you will need to ssh into the robot. In this window, you will need to type "ssh pi@192.168.100.1". You will be prompted to enter a password. If you have not changed it on the raspberry pi within the robot, it will be "raspberry". NOTE: If an error occurs, in the middle of the error statement is a line of code. Run this code into the terminal command line and repeat this step
+   7. Then enter "cd Desktop/Wless_code_RC18". This may be different depending on where you saved the file Wless_code_RC18
+   8. After navigating to Wless_code_RC18 you will be required to run the script "bash Start_PiStream.sh". After running this, the MacStream cache will fill up. If you chose to pipe the stream into a python file, you will not see the cache fill, but after a few seconds, a window will pop up with the chosen vision.
+ TROUBLESHOOTING: <br />
+   Large amount of lag:
+     If this happens, within the code on the robot, decrease the frame rate and the size of each frame being sent. The lowest advised setting for frame rate is 10 fps and the lowest advised resolution for each frame is 720 x 480
+   
