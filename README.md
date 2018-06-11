@@ -1,7 +1,7 @@
 # RoboCup-2018-Driving-Code
 This is the final edit of the code that the King's Legacy team will be using during the RoboCup Rapidly Manufactured Robotics League, Montreal, 2018 
 
-# Resetting a Dynamixel ID
+## Resetting a Dynamixel ID
 
 1.	Navigate to **RoboCup-2018-Driving-Code/Dynamixel-Utilities**
 2.	Run the file **dxl_utils.py**
