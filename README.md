@@ -4,37 +4,34 @@ This is the final edit of the code that the King's Legacy team will be using dur
 
 # Resetting a Dynamixel ID
 
-1.	Navigate to RoboCup-2018-Driving-Code/Dynamixel-Utilities
-2.	Run the file dxl_utils.py
+1.	Navigate to **RoboCup-2018-Driving-Code/Dynamixel-Utilities**
+2.	Run the file **dxl_utils.py**
 3.	Follow the steps as outlined by the code
 
 # Testing A Servo’s Capability
 
-1.	Navigate to RoboCup-2018-Driving-Code/Dynamixel-Utilities
-2.	Run the file testServo.py
+1.	Navigate to **RoboCup-2018-Driving-Code/Dynamixel-Utilities**
+2.	Run the file **testServo.py**
 
 # Driving the EmuBot with Camera Feed
 
 1.	Go to any MacBook
-2.	Enter the password (“raspberry”)
-3.	Connect to WiFi called Kings_Legacy.Emubot.1 (or .2, depending on which emuBot is being used)
-4. If prompted with password, enter “raspberry”
-5.	Open a terminal window
-6.	Enter ssh pi@192.168.100.1
-7.	Enter the password (“raspberry”)
-8.	Enter cd Desktop/Server-Code-2018/
-9.	Enter python3 RoboCupServer-Current.py
-10.	The server is now running, leave this terminal window be
-11.	Navigate to Desktop/RoboCup-2018-Driving-Code/CurrentEmuBotCode2
-12.	Make sure the gamepad is plugged in to the laptop
-13.	Open client.py in IDLE3 and run
-14.	Go to, under the linux control bar at the top Terminal > New Terminal
-15.	In this new window, navigate to Desktop/RoboCup-2018-Driving-Code/CurrentEmuBotCode2 via terminal
-16.	Enter Start_MacStream.sh
-17.	Go to, under the linux control bar at the top Terminal > New Terminal
-18.	In this new code window, follow steps 5-7
-19.	Run Start_PiStream.sh
-20.	Cache should fill up and have a camera stream via mplayer
+2.	Connect to WiFi called Kings_Legacy.Emubot.1 (or .2, depending on which emuBot is being used)
+3.	Open a terminal window
+4.	Enter **ssh pi@192.168.100.1**
+5.	Enter **cd Desktop/Server-Code-2018/**
+6.	Enter **python3 RoboCupServer-Current.py**
+7.	The server is now running, leave this terminal window be
+8.	Navigate to **Desktop/RoboCup-2018-Driving-Code/CurrentEmuBotCode2**
+9.	Make sure the gamepad is plugged in to the laptop
+10.	Open **client.py** in IDLE3 and run
+11.	Go to, under the linux control bar at the top Terminal > New Terminal
+12.	In this new window, navigate to **Desktop/RoboCup-2018-Driving-Code/CurrentEmuBotCode2** via terminal
+13.	Enter **Start_MacStream.sh**
+14.	Go to, under the linux control bar at the top **Terminal > New Terminal**
+15.	In this new code window, follow steps 5-7
+16.	Run **Start_PiStream.sh**
+17.	Cache should fill up and have a camera stream via mplayer
 
 # Driving the FlipperBot
 
@@ -47,15 +44,12 @@ This is the final edit of the code that the King's Legacy team will be using dur
 7.	Enter cd Desktop/Server-Code-2018/
 8.	Enter python3 RoboCupServer-Current.py
 9.	The server is now running, leave this terminal window be
-
 10.	Navigate to Desktop/RoboCup-2018-Driving-Code/Client-Code-2018/CurrentFlipperCode
 11.	Make sure the gamepad is plugged in to the laptop
 12.	Open client.py in IDLE3 and run
-
 13.	Go to, under the linux control bar at the top Terminal > New Terminal
 14.	In this new window, navigate to Desktop/RoboCup-2018-Driving-Code/Client-Code-2018/CurrentEmuBotCode2 via terminal
 15.	Enter bash Start_MacStream.sh
-
 16.	Go to, under the linux control bar at the top Terminal > New Terminal
 17.	In this new code window, follow steps 5-7
 18.	Run Start_PiStream.sh
@@ -66,7 +60,6 @@ This is the final edit of the code that the King's Legacy team will be using dur
 1.	Follow Steps 1-5 under “Driving the EmuBot”
 2.	Enter cd Desktop/Server-Sensor-Code
 3.	Enter python3 sensors.py
-
 
 # Sensors: Visual
 
