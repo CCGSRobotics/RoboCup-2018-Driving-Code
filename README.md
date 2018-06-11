@@ -1,18 +1,18 @@
 # RoboCup-2018-Driving-Code
 This is the final edit of the code that the King's Legacy team will be using during the RoboCup Rapidly Manufactured Robotics League, Montreal, 2018 
 ----------------------------------------------------------------------------------------------------------------------------
-Resetting a Dynamixel ID
+# Resetting a Dynamixel ID
 
 1.	Navigate to RoboCup-2018-Driving-Code/Dynamixel-Utilities
 2.	Run the file dxl_utils.py
 3.	Follow the steps as outlined by the code
 
-Testing A Servo’s Capability
+# Testing A Servo’s Capability
 
 1.	Navigate to RoboCup-2018-Driving-Code/Dynamixel-Utilities
 2.	Run the file testServo.py
 
-Driving the EmuBot with Camera Feed
+# Driving the EmuBot with Camera Feed
 
 1.	Go to any MacBook
 2.	Enter the password (“raspberry”)
@@ -37,7 +37,7 @@ Driving the EmuBot with Camera Feed
 18.	Run Start_PiStream.sh
 19.	Cache should fill up and have a camera stream via mplayer
 
-Driving the FlipperBot
+# Driving the FlipperBot
 
 1.	Go to any MacBook
 2.	Enter the password (“raspberry”)
@@ -62,14 +62,13 @@ Driving the FlipperBot
 18.	Run Start_PiStream.sh
 19.	Cache should fill up and have a camera stream via mplayer
 
-Sensors: CO2 and Temperature
+# Sensors: CO2 and Temperature
 
 1.	Follow Steps 1-5 under “Driving the EmuBot”
 2.	Enter cd Desktop/Server-Sensor-Code
 3.	Enter python3 sensors.py
 
-
-Sensors: Visual
+# Sensors: Visual
 
 1.	Follow Steps 1-5 under “Driving the EmuBot”
 2.	Go to, under the linux control bar at the top Terminal > New Terminal
