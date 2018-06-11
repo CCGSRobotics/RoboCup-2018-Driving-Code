@@ -1,6 +1,7 @@
 # RoboCup-2018-Driving-Code
 This is the final edit of the code that the King's Legacy team will be using during the RoboCup Rapidly Manufactured Robotics League, Montreal, 2018 
 ----------------------------------------------------------------------------------------------------------------------------
+
 # Resetting a Dynamixel ID
 
 1.	Navigate to RoboCup-2018-Driving-Code/Dynamixel-Utilities
@@ -68,16 +69,16 @@ This is the final edit of the code that the King's Legacy team will be using dur
 2.	Enter cd Desktop/Server-Sensor-Code
 3.	Enter python3 sensors.py
 
+
 # Sensors: Visual
 
 1.	Follow Steps 1-5 under “Driving the EmuBot”
 2.	Go to, under the linux control bar at the top Terminal > New Terminal
-3.	Enter cd /Desktop/Sensory-Abilities-2018/Vision-Code
+3.	Enter cd /Desktop/Sensory-Abilities-2018/Sensor-Code-2018/Vision-Code
 4.	Run any of:
-a.	QR Code (my_motion_QRCode.py)
-b.	Rotation Code (my_motion_rotation_shadow.pyb)
-With the command: Start_MacStreamVision.sh | python <filename>
-5.	Make sure you’re not running it in python 2!
+   a.	QR Code (my_motion_QRCode.py)
+  b.	Rotation Code (my_motion_rotation_shadow.pyb)
+With the command: bash Start_MacStreamSensors.sh | python <filename>
 6.	Leave this terminal window be
 7.	Connect to robot WiFi
 8.	Go to, under the linux control bar at the top Terminal > New Terminal
@@ -85,4 +86,5 @@ With the command: Start_MacStreamVision.sh | python <filename>
 10.	Enter the password (“raspberry”)
 11.	Enter cd Desktop/Server-Code-2017/
 12.	Run bash Start_PiStream.sh
-13.	Cache should fill 
+13.	Cache should fill up and have a camera stream via python
+
