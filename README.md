@@ -1,6 +1,5 @@
 # RoboCup-2018-Driving-Code
 This is the final edit of the code that the King's Legacy team will be using during the RoboCup Rapidly Manufactured Robotics League, Montreal, 2018 
-----------------------------------------------------------------------------------------------------------------------------
 
 # Resetting a Dynamixel ID
 
@@ -54,6 +53,21 @@ This is the final edit of the code that the King's Legacy team will be using dur
 17.	In this new code window, follow steps 5-7
 18.	Run Start_PiStream.sh
 19.	Cache should fill up and have a camera stream via mplayer
+
+# Driving Code Troubleshooting
+
+•	When running robot code: 
+   o	Incomplete packet:
+  	Make sure servos are recieving power and connected to the USB2AX 
+   o	Wrong Header: 
+	   Source is unknown. Run the code multiple times until the error stops working. If repeated more than 10 times, reboot the robot, make sure all cables are plugged in and all hardware is recieving necesssary power requirements. 
+   o	Broken Joint or Broken Wheel: 
+	   A number of servos would have broken. The ID will be displayed on the screen. The most common reason of this is if too much torque experienced by the servo. This is fixed by turning the servos on and off. If this error continues with no pressure on the servo, this servo will be required to be replaced. 
+•	When running laptop code: 
+   o	Broken Pipe error: 
+     Make sure the robot's code is still running and does not contain print statments describing which joint or wheel is broken. See above "Broken Joint or Broken Wheel" after quitting the code and before repeating steps 6 and 8. 
+
+----------------------------------------------------------------------------------------------------------------------------
 
 # Sensors: CO2 and Temperature
 
