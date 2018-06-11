@@ -7,12 +7,12 @@ This is the final edit of the code that the King's Legacy team will be using dur
 2.	Run the file **dxl_utils.py**
 3.	Follow the steps as outlined by the code
 
-# Testing A Servo’s Capability
+## Testing A Servo’s Capability
 
 1.	Navigate to **RoboCup-2018-Driving-Code/Dynamixel-Utilities**
 2.	Run the file **testServo.py**
 
-# Driving the EmuBot with Camera Feed
+## Driving the EmuBot with Camera Feed
 
 1.	Go to any MacBook
 2.	Connect to WiFi called Kings_Legacy.Emubot.1 (or .2, depending on which emuBot is being used)
@@ -32,7 +32,7 @@ This is the final edit of the code that the King's Legacy team will be using dur
 16.	Run **Start_PiStream.sh**
 17.	Cache should fill up and have a camera stream via mplayer
 
-# Driving the FlipperBot
+## Driving the FlipperBot
 
 1.	Go to any MacBook
 2.	Enter the password (“raspberry”)
@@ -54,7 +54,7 @@ This is the final edit of the code that the King's Legacy team will be using dur
 18.	Run **Start_PiStream.sh**
 19.	Cache should fill up and have a camera stream via mplayer
 
-# Driving Code Troubleshooting
+## Driving Code Troubleshooting
 
 - When running robot code: 
    - Incomplete packet:
@@ -69,27 +69,27 @@ This is the final edit of the code that the King's Legacy team will be using dur
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-# Sensors: CO2 and Temperature
+## Sensors: CO2 and Temperature
 
 1.	Follow Steps 1-5 under “Driving the EmuBot”
 2.	Enter cd Desktop/Server-Sensor-Code
 3.	Enter python3 sensors.py
 
-# Sensors: Visual
+## Sensors: Visual
 
 1.	Follow Steps 1-5 under “Driving the EmuBot”
 2.	Go to, under the linux control bar at the top Terminal > New Terminal
 3.	Enter **cd /Desktop/Sensory-Abilities-2018/Sensor-Code-2018/Vision-Code**
 4.	Run any of:
    a.	QR Code (my_motion_QRCode.py)
-  b.	Rotation Code (my_motion_rotation_shadow.pyb)
+  b.	Movement Code (my_motion_rotation_shadow.py)
 With the command: bash Start_MacStreamSensors.sh | python <filename>
 6.	Leave this terminal window be
 7.	Connect to robot WiFi
 8.	Go to, under the linux control bar at the top Terminal > New Terminal
-9.	Enter ssh pi@192.168.100.1
+9.	Enter **ssh pi@192.168.100.1**
 10.	Enter the password (“raspberry”)
-11.	Enter cd Desktop/Server-Code-2017/
+11.	Enter **cd Desktop/Server-Code-2017/**
 12.	Run bash Start_PiStream.sh
 13.	Cache should fill up and have a camera stream via python
 
