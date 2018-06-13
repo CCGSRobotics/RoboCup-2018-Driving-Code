@@ -4,7 +4,6 @@ import pyaudio, time, socket
 from constants import *
 
 def callback(in_data,frame_count,time_info,status):
-    #print(len(str(in_data).encode("utf-8")))
     s.send(in_data)
     return in_data,pyaudio.paContinue
 

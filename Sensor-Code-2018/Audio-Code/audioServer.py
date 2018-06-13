@@ -2,12 +2,12 @@
 
 import pyaudio, time, socket
 from constants import *
-from audioplayer import *
+from audioPlayer import *
 
 player = AudioPlayer(CHUNK_SIZE, WIDTH, RATE, CHANNELS)
 
 s = socket.socket()
-s.bind(("",PORT))
+s.bind(("",PORT)) # The host is empty to allow external connections
 
 s.listen(1)
 client, address = s.accept()
@@ -19,7 +19,6 @@ while True:
     if not data:
         break
     
-    #print("From connected user: " + data)
     player.audioData = data
     player.play()
 

@@ -1,9 +1,0 @@
-Hi there,
-
-This file is essentially a list of issues that have appeared while testing this code on the pi.
-
-1. The audio output is garbled (extremely unclear):
-	- This is most likely because the internet connection between the client and the server is poor.
-	- It is also possible that the microphone is spoilt or broken. In which needs to be checked with code that is not reliant on internt.
-	- The speaker output is going back into the microphone (because they are close together) and is causing a loop. This may spoil both the speaker and the microphone.
-	- The code has some overlooked bugs which MUST BE REPORTED IMMEDIATELY.
