@@ -18,7 +18,9 @@ This is the final edit of the code that the King's Legacy team will be using dur
 2.	Connect to WiFi called Kings_Legacy.Emubot.1 (or .2, depending on which emuBot is being used)
 3.	Open a terminal window
 4.	Enter **ssh pi@192.168.100.1**
-5.	Enter **cd Desktop/Server-Code-2018/**
+5.	Enter **cd Desktop/
+
+/**
 6.	Enter **python3 RoboCupServer-Current.py**
 7.	The server is now running, leave this terminal window be
 8.	Navigate to **Desktop/RoboCup-2018-Driving-Code/CurrentEmuBotCode2**
@@ -89,7 +91,7 @@ With the command: bash Start_MacStreamSensors.sh | python <filename>
 8.	Go to, under the linux control bar at the top Terminal > New Terminal
 9.	Enter **ssh pi@192.168.100.1**
 10.	Enter the password (“raspberry”)
-11.	Enter **cd Desktop/Server-Code-2017/**
+11.	Enter **cd Desktop/Server-Code-2018/** 
 12.	Run bash Start_PiStream.sh
 13.	Cache should fill up and have a camera stream via python
 
