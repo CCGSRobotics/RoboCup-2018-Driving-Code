@@ -1,25 +1,29 @@
-class AudioPlayer:
-    # Plays a single chunk of audio data
+import pyaudio
+
+class AudioPlayer(pyaudio.PyAudio):
+    """An audio player transferring audio data from audio_client.py to audio_server.py"""
+
     def __init__(self, chunksize, width, rate, channels):
-        self.audioClient = pyaudio.PyAudio()
-        self.audioData = ""
+        """Initialise all variables and the pyaudio.PyAudio super"""
+        super().__init__()
+        self.audio_data = ""
         self.chunksize = chunksize
         self.width = width
         self.rate = rate
         self.channels = channels
 
-        self.stream = self.audioClient.open(
+        self.stream = super().open(
             format=self.width,
             channels=self.channels,
             rate=self.rate,
             output=True
         )
 
-    # Play the entire byte string
     def play(self):
-        self.stream.write(self.audioData)
+        """Play the entire byte string"""
+        self.stream.write(self.audio_data)
 
-    # Close the audio streams
     def close(self):
+        """Close the audio stream"""
         self.stream.close()
-        self.audioClient.terminate()
+        super().terminate()
