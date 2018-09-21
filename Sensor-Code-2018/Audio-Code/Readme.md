@@ -1,5 +1,5 @@
 # Speaker Code
-**Last updated on 12/6/2018**
+**Last updated on 22/9/2018**
 
 Welcome to the King's Legacy 2018 Speaker Code - an implementation of Python 3's pyaudio module using sockets and a callback function to ensure a smooth and clear transfer of live audio from one device to another.
 
