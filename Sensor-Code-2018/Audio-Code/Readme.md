@@ -49,12 +49,12 @@ At this point, you are all good to go!
 	- Ensure that you have followed the steps regarding **Setting up the Microphone** and **How to start the Pyaudio Server** in the user guide.
 
 ## How the code is constructed
-**Server Code** - *audioServer.py*
+**Server Code** - *audio_server.py*
 
 The server code uses TCP sockets - this ensures that the audio is always sent without problems and if there are problems, it will keep trying to send the data until it succeed.
-**Client Code** - *audioClient.py*
+**Client Code** - *audio_client.py*
 
 **Constants** - *constants.py*
 
-**Audio Class** - *audioPlayer.py*
+**Audio Class** - *audio_player.py*
 
