@@ -1,23 +1,24 @@
-# Pyaudio callback client
+import pyaudio
+import time
+import socket
+import constants
 
-import pyaudio, time, socket
-from constants import *
+audioClient = pyaudio.PyAudio()
+socketClient = socket.socket()
+socketClient.connect((constants.HOST, constants.PORT))
 
-def callback(in_data,frame_count,time_info,status):
-    s.send(in_data)
-    return in_data,pyaudio.paContinue
+def callback(in_data, frame_count, time_info, status):
+    global socketClient
+    socketClient.send(in_data)
+    return in_data, pyaudio.paContinue
 
-p = pyaudio.PyAudio()
-s = socket.socket()
-s.connect((HOST,PORT))
-
-stream = p.open(
-    format = WIDTH,
-    channels = CHANNELS,
-    rate = RATE,
-    input = True,
-    output = False,
-    stream_callback = callback
+stream = audioClient.open(
+    format=constants.WIDTH,
+    channels=constants.CHANNELS,
+    rate=constants.RATE,
+    input=True,
+    output=False,
+    stream_callback=callback
 )
 
 stream.start_stream()
@@ -27,5 +28,5 @@ while stream.is_active():
 stream.stop_stream()
 stream.close()
 
-s.close()
-p.terminate()
+audioClient.terminate()
+socketClient.close()
