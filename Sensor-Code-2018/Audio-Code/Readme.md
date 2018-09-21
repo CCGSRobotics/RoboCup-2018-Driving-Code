@@ -52,6 +52,7 @@ At this point, you are all good to go!
 **Server Code** - *audio_server.py*
 
 The server code uses TCP sockets - this ensures that the audio is always sent without problems and if there are problems, it will keep trying to send the data until it succeed.
+
 **Client Code** - *audio_client.py*
 
 **Constants** - *constants.py*
