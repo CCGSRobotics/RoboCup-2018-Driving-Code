@@ -1,7 +1,8 @@
+"""AudioPlayer: An audio player which transfers audio data from audio_client.py to audio_server.py"""
 import pyaudio
 
 class AudioPlayer(pyaudio.PyAudio):
-    """An audio player transferring audio data from audio_client.py to audio_server.py"""
+    """An audio player which plays single chunks of data"""
 
     def __init__(self, chunksize, width, rate, channels):
         """Initialise all variables and the pyaudio.PyAudio super"""
