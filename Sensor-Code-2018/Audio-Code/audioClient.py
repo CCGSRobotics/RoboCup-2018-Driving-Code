@@ -1,10 +1,10 @@
-import pyaudio
-import time
-import socket
 import constants
+import pyaudio
+from socket import socket
+from time import sleep
 
 audioClient = pyaudio.PyAudio()
-socketClient = socket.socket()
+socketClient = socket()
 socketClient.connect((constants.HOST, constants.PORT))
 
 def callback(in_data, frame_count, time_info, status):
