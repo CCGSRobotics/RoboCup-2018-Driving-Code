@@ -10,6 +10,7 @@ This file serves as a documentation which explains:
 * Future plans to improve the code
 
 Currently, this code has been written in a basic, low level manner and is considerably tedious to run. At some point it will be updated so that it will be easier to use.
+
 ## User Guide
 **Setting up the Microphone**
 1. Plug the USB microphone into one of the USB sockets on the pi.
@@ -36,14 +37,14 @@ At this point, you are all good to go!
 ## Known issues and Practical Solutions
 1. The audio output is garbled (extremely unclear):
 	- This is most likely because the internet connection between the client and the server is poor.
-	- It is also possible that the microphone is spoilt or broken. In which needs to be checked with code that is not reliant on internt.
+	- It is also possible that the microphone is spoilt or broken. In which needs to be checked with code that is not reliant on internet.
 	- The speaker output is going back into the microphone (because they are close together) and is causing a loop. This may spoil both the speaker and the microphone.
 	- The code has some overlooked bugs which MUST BE REPORTED IMMEDIATELY.
 2. The audio output is too quiet:
 	- Turn the volume up on your laptop or desktop.
 	- Earphones/Headphones may be an issue
 	- Ensure that the USB microphone is properly configured on the pi (refer to the user guide at **Setting up the Microphone**)
-	- Try to bend the USB (not too hard of course). If you can easily bend it, then it's 200% broken.
+	- Try to gently bend the USB. If you can easily bend it, then it is broken.
 	- The code has some overlooked bugs which MUST BE REPORTED IMMEDIATELY.
 3. There is no audio output:
 	- Ensure that you have followed the steps regarding **Setting up the Microphone** and **How to start the Pyaudio Server** in the user guide.
