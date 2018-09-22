@@ -5,7 +5,7 @@ from audio_player import AudioPlayer
 import constants
 
 def main():
-    """main function"""
+    """audio_server.py: main function"""
     player = AudioPlayer(constants.CHUNK_SIZE, constants.WIDTH, constants.RATE, constants.CHANNELS)
 
     socket_client = socket.socket()
