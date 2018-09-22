@@ -5,18 +5,19 @@ import time
 import constants
 import pyaudio
 
-def callback(client, in_data, frame_count, time_info, status):
+AUDIO = pyaudio.PyAudio()
+SOCKET_CLIENT = socket.socket()
+SOCKET_CLIENT.connect((constants.HOST, constants.PORT))
+
+def callback(in_data, frame_count, time_info, status):
     """A callback function for the pyaudio.PyAudio audio stream"""
-    client.send(in_data)
+    SOCKET_CLIENT.send(in_data)
     return in_data, pyaudio.paContinue
 
 def main():
     """audio_client.py: main function"""
-    audio = pyaudio.PyAudio()
-    socket_client = socket.socket()
-    socket_client.connect((constants.HOST, constants.PORT))
 
-    stream = audio.open(
+    stream = AUDIO.open(
         format=constants.WIDTH,
         channels=constants.CHANNELS,
         rate=constants.RATE,
@@ -32,7 +33,7 @@ def main():
     stream.stop_stream()
     stream.close()
 
-    audio.terminate()
-    socket_client.close()
+    AUDIO.terminate()
+    SOCKET_CLIENT.close()
 
 main()
