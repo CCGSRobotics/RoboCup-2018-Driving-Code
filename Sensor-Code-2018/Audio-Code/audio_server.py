@@ -1,26 +1,30 @@
-# pyaudio callback server
+"""A pyaudio callback server"""
 
-import pyaudio, time, socket
-from constants import *
-from audioPlayer import *
+import socket
+from audio_player import AudioPlayer
+import constants
 
-player = AudioPlayer(CHUNK_SIZE, WIDTH, RATE, CHANNELS)
+def main():
+    """main function"""
+    player = AudioPlayer(constants.CHUNK_SIZE, constants.WIDTH, constants.RATE, constants.CHANNELS)
 
-s = socket.socket()
-s.bind(("",PORT)) # The host is empty to allow external connections
+    socket_client = socket.socket()
+    socket_client.bind(("", constants.PORT))
 
-s.listen(1)
-client, address = s.accept()
+    socket_client.listen(1)
+    client, address = socket_client.accept()
 
-print("Connection from: " + str(address))
+    print("Audio Connection from:", str(address))
 
-while True:
-    data = client.recv(8192)
-    if not data:
-        break
-    
-    player.audioData = data
-    player.play()
+    while True:
+        data = client.recv(8192)
+        if not data:
+            break
 
-client.close()
-player.close()
+        player.audio_data = data
+        player.play()
+
+    client.close()
+    player.close()
+
+main()
