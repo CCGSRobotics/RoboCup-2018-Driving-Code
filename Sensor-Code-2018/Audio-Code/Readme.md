@@ -23,10 +23,10 @@ Currently, this code has been written in a basic, low level manner and is consid
 At this point, your microphone is ready to go!
 
 **How to start the Pyaudio Server**
-1. On the server side of the potential connection, run the code that is named "audioServer.py". The code should not output anything.
+1. On the server side of the potential connection, run the code that is named "audio_server.py". The code should not output anything.
 	- If the code complains about anything to do with ALSA, please ignore them.
 	- As long as the code has not crashed, then everything is working correctly.
-2. On the client side of the potential connection, run the code that is named "audioClient.py". The code should not output anything.
+2. On the client side of the potential connection, run the code that is named "audio_client.py". The code should not output anything.
 	- Please input the IP address of the server when asked.
 	- If the code complains about anything to do with ALSA, please ignore them.
 	- As long as the code has not crashed, then everything is working correctly.
