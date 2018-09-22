@@ -11,7 +11,7 @@ def callback(client, in_data, frame_count, time_info, status):
     return in_data, pyaudio.paContinue
 
 def main():
-    """audio_server.py: main function"""
+    """audio_client.py: main function"""
     audio = pyaudio.PyAudio()
     socket_client = socket.socket()
     socket_client.connect((constants.HOST, constants.PORT))
