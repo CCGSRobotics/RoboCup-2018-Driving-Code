@@ -1,174 +1,160 @@
-#!/usr/bin/env python
-import time
-from controller import *
-from constants import *
-import WheelArmClass as WAC
-import BasicClasses as BC
-import os
+""" The movement client for the emubot """
 
-Li = 0
-Ri = 0
-ForwardsI = 0
+import basic_classes
+import constants
+import controller
+import wheel_arm_class
 
-SwitchONN = True
-alf = ""
-backwardsl = 1
-backwardsr = 1
-FlippersModeL = 1
-FlippersModeR = 1
-RJoyStickPressed = 0
-LJoyStickPressed = 0
+LEFT_MOVEMENT = 0
+RIGHT_MOVEMENT = 0
+FORWARDS_MOVEMENT = 0
 
-Arm = WAC.Arm([5,6,7])
-WheelL1 = BC.Wheel(1)
-WheelR2 = BC.Wheel(2)
-WheelL3 = BC.Wheel(3)
-WheelR4 = BC.Wheel(4)
+LOCAL_SWITCH_ON = True
+BACKWARDS_L = 1
+BACKWARDS_R = 1
 
-def LWheels(speed):
+ARM = wheel_arm_class.Arm([5, 6, 7])
+WHEEL_L1 = basic_classes.Wheel(1)
+WHEEL_R2 = basic_classes.Wheel(2)
+WHEEL_L3 = basic_classes.Wheel(3)
+WHEEL_R4 = basic_classes.Wheel(4)
+
+def move_left_wheels(speed):
+    """ Move the wheels on the left side of the emubot """
     if speed == 0:
-        WheelL1.moveWheel(0)
-        WheelL3.moveWheel(0)
+        WHEEL_L1.move_wheel(0)
+        WHEEL_L3.move_wheel(0)
     else:
-        WheelL1.moveWheel(speed)
-        WheelL3.moveWheel(speed)
-def RWheels(speed):
+        WHEEL_L1.move_wheel(speed)
+        WHEEL_L3.move_wheel(speed)
+
+def move_right_wheels(speed):
+    """ Move the wheels on the right side of the emubot """
     if speed == 0:
-        WheelR2.moveWheel(0)
-        WheelR4.moveWheel(0)
+        WHEEL_R2.move_wheel(0)
+        WHEEL_R4.move_wheel(0)
     else:
-        WheelR2.moveWheel(speed)
-        WheelR4.moveWheel(speed)
-print("Vroom Vroom!")
-for event in gamepad.read_loop():
+        WHEEL_R2.move_wheel(speed)
+        WHEEL_R4.move_wheel(speed)
+
+print("Event loop starting...")
+
+for event in controller.gamepad.read_loop():
     try:
-        x = event.code
-        y = event.value
-        z = event.type
-        if x != 0:
-            if 0: print(event)
-            
-            elif x == LEFT_TRG:
-                if Li == 3 or y <= 0:
-                    if y > 0:
-                        LWheels(y*4*backwardsl)
-                    else:
-                        LWheels(0)
-                    Li = 1
-                else:
-                    Li = Li + 1
-            elif x == RIGHT_TRG:
-                if Ri == 3 or y <= 0:
-                    if y > 0:
-                        RWheels(-(y*4*backwardsr))
-                    else:
-                        RWheels(0)
-                    Ri = 1
-                else:
-                    Ri = Ri + 1    
-            elif x == LB:
-                if y == 1:
-                    if backwardsl > 0:
-                        backwardsl = -1
-                    else:
-                        backwardsl = 1
-            elif x == RB:
-                if y == 1:
-                    if backwardsr > 0:
-                        backwardsr = -1
-                    else:
-                        backwardsr = 1
-                        
-            elif x == LHORIZ:
-                if ForwardsI == 3 or y <= 0:
-                    if y > 0:
-                        LWheels(y/40)
-                        RWheels(y/40)
-                    elif y < 0:
-                        LWheels(y/40)
-                        RWheels(y/40)
-                    
-                    else:
-                        LWheels(0)
-                        RWheels(0)
-                    ForwardsI = 1
-                else:
-                    ForwardsI = ForwardsI + 1
-            elif x == LVERT:
-                LWheels(-(y/40))
-                RWheels((y/40))
+        event_code = event.code
+        event_value = event.value
 
+        if event_code != 0:
+            if event_code == constants.LEFT_TRG:
+                if LEFT_MOVEMENT == 3 or event_value <= 0:
+                    if event_value > 0:
+                        move_left_wheels(event_value * 4 * BACKWARDS_L)
+                    else:
+                        move_left_wheels(0)
+                    LEFT_MOVEMENT = 1
+                else:
+                    LEFT_MOVEMENT = LEFT_MOVEMENT + 1
 
-                
-            elif x == DPadHoriz:
-                if y == 1:
-                    Arm.MovePan(direction='increase')
-                    #Pan forward
-                elif y == -1:
-                    Arm.MovePan(direction='decrease')
-                    #Pan backward
-                elif y == 0:
-                    Arm.MovePan(direction='neutral')
-                    #Stop Pan moving                                       
-            elif x == DPadVert:
-                if y == -1:
-                    Arm.MoveTilt(direction='increase')
-                    #Tilt forward
-                elif y == 1:
-                    Arm.MoveTilt(direction='decrease')
-                    #Tilt backward
-                elif y == 0:
-                    Arm.MoveTilt(direction='neutral')
-                    #Stop tilt moving
-            elif x == Y:
-                if y == 1:
-                    Arm.MoveShoulder(direction='increase')
-                    #Shoulder moving forward
-                elif y == 0:
-                    Arm.MoveShoulder(direction='neutral')
-              #Stop Shoulder Moving
-            elif x == A:
-                if y == 1:
-                    Arm.MoveShoulder(direction='decrease')
-                    #shoulder moving back
-                elif y == 0:
-                    Arm.MoveShoulder(direction='neutral')
-                    #Stop Shoulder Moving
-                    
-            elif x == X:
-                Arm.MoveArmSetPos(ShoulderPos=512,TiltPos=200,PanPos=512)
+            elif event_code == constants.RIGHT_TRG:
+                if RIGHT_MOVEMENT == 3 or event_value <= 0:
+                    if event_value > 0:
+                        move_right_wheels(-(event_value * 4 * BACKWARDS_R))
+                    else:
+                        move_right_wheels(0)
+                    RIGHT_MOVEMENT = 1
+                else:
+                    RIGHT_MOVEMENT = RIGHT_MOVEMENT + 1
 
-            elif x == B:
-                if SwitchONN and y != 0:
-                    SwitchOFF()
-                    SwitchONN = False
+            elif event_code == constants.LB:
+                if event_value == 1:
+                    if BACKWARDS_L > 0:
+                        BACKWARDS_L = -1
+                    else:
+                        BACKWARDS_L = 1
+
+            elif event_code == constants.RB:
+                if event_value == 1:
+                    if BACKWARDS_R > 0:
+                        BACKWARDS_R = -1
+                    else:
+                        BACKWARDS_R = 1
+
+            elif event_code == constants.LHORIZ:
+                if FORWARDS_MOVEMENT == 3 or event_value <= 0:
+                    if event_value > 0:
+                        move_left_wheels(event_value / 40)
+                        move_right_wheels(event_value / 40)
+                    elif event_value < 0:
+                        move_left_wheels(event_value / 40)
+                        move_right_wheels(event_value / 40)
+                    else:
+                        move_left_wheels(0)
+                        move_right_wheels(0)
+                    FORWARDS_MOVEMENT = 1
+
+                else:
+                    FORWARDS_MOVEMENT = FORWARDS_MOVEMENT + 1
+
+            elif event_code == constants.LVERT:
+                move_left_wheels(-(event_value / 40))
+                move_right_wheels((event_value / 40))
+
+            elif event_code == constants.DPadHoriz:
+                if event_value == 1:
+                    ARM.move_pan(direction="increase")
+                elif event_value == -1:
+                    ARM.move_pan(direction="decrease")
+                elif event_value == 0:
+                    ARM.move_pan(direction="neutral")
+
+            elif event_code == constants.DPadVert:
+                if event_value == -1:
+                    ARM.move_tilt(direction="increase")
+                elif event_value == 1:
+                    ARM.move_tilt(direction="decrease")
+                elif event_value == 0:
+                    ARM.move_tilt(direction="neutral")
+
+            elif event_code == constants.Y:
+                if event_value == 1:
+                    ARM.move_shoulder(direction="increase")
+                elif event_value == 0:
+                    ARM.move_shoulder(direction="neutral")
+
+            elif event_code == constants.A:
+                if event_value == 1:
+                    ARM.move_shoulder(direction="decrease")
+                elif event_value == 0:
+                    ARM.move_shoulder(direction="neutral")
+
+            elif event_code == constants.X:
+                ARM.move_arm_set_position(shoulder_pos=512, tilt_pos=200, pan_pos=512)
+
+            elif event_code == constants.B:
+                if LOCAL_SWITCH_ON and event_value != 0:
+                    LOCAL_SWITCH_ON = False
                     print("OFF")
-                elif y != 0:
-                    SwitchON()
-                    SwitchONN = True
-                    print("ON")
-            elif x == START:
-                #Arm.MoveArmSetPos(ShoulderPos=200,TiltPos=200,PanPos=512)
-                Arm.reset()
-                WheelL1.moveWheel(0)
-                WheelL3.moveWheel(0)
-                WheelR2.moveWheel(0)
-                WheelR4.moveWheel(0)
-                #Turn servos off
-                #wait 0.5 seconds
-                #Turn servos on
-                #Wait 0.5 seconds
-                #Reset all servos to original positions
-            elif x == BACK:
-                WheelL1.moveWheel(0)
-                WheelL3.moveWheel(0)
-                WheelR2.moveWheel(0)
-                WheelR4.moveWheel(0)
-                #Robot in arm front position
-                #Arm.MoveArmSetPos(ShoulderPos=512,TiltPos=200,PanPos=512)
-            else:
-                print(event, 'none')
-    except BrokenPipeError as e:
-        print(e)
 
-thread1.direction = ""
+                elif event_value != 0:
+                    LOCAL_SWITCH_ON = True
+                    print("ON")
+
+            elif event_code == constants.START:
+                # Reset all servos to original positions
+                ARM.reset()
+                WHEEL_L1.move_wheel(0)
+                WHEEL_L3.move_wheel(0)
+                WHEEL_R2.move_wheel(0)
+                WHEEL_R4.move_wheel(0)
+
+            elif event_code == constants.BACK:
+                WHEEL_L1.move_wheel(0)
+                WHEEL_L3.move_wheel(0)
+                WHEEL_R2.move_wheel(0)
+                WHEEL_R4.move_wheel(0)
+
+            else:
+                print("Unidentified Event:", event)
+
+    except BrokenPipeError as error:
+        print(error)
