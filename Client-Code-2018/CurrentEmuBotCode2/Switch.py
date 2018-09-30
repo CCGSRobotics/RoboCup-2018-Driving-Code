@@ -1,10 +1,13 @@
-from connect import *
-import lib_threading1
-from constants import *
-        
+""" A module defining a function to change the state of SOCKET """
+
+import connect
+import constants
+
 def switch(state):
-    if state == SWITCHON:
-        sock.sendall(bytes("OFF\n", "utf-8"))
-        return SWITCHOFF
-    sock.sendall(bytes("ON\n", "utf-8"))
-    return SWITCHON
+    """ Invert the state of SOCKET """
+    if state == constants.SWITCHON:
+        connect.SOCKET.sendall(bytes("OFF\n", "utf-8"))
+        return constants.SWITCHOFF
+
+    connect.SOCKET.sendall(bytes("ON\n", "utf-8"))
+    return constants.SWITCHON
