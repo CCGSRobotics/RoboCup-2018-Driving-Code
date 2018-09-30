@@ -1,24 +1,26 @@
+""" Initialises the input source by which the emubot is controlled """
+
 import evdev
 
-gamepads = []
-devices = [evdev.InputDevice(fn) for fn in evdev.list_devices()]
-count = False
+def main():
+    """ controller.py: main function """
+    devices = [evdev.InputDevice(input_source) for input_source in evdev.list_devices()]
 
-# controllers is a set for faster access.
-controllers = {"Logitech Gamepad F310",
-               "Logitech Gamepad F710",
-               "Microsoft X-Box 360 pad",
-               "Logitech Logitech Cordless RumblePad 2",
-               "Logitech Logitech Dual Action"}
+    controllers = {"Logitech Gamepad F310",
+                   "Logitech Gamepad F710",
+                   "Microsoft X-Box 360 pad",
+                   "Logitech Logitech Cordless RumblePad 2",
+                   "Logitech Logitech Dual Action"}
 
-gamepad = None
-for i in devices:
-    if i.name in controllers:
-        gamepad = i
-        break
+    gamepad = None
+    for i in devices:
+        if i.name in controllers:
+            gamepad = i
+            break
 
-assert gamepad # Ensure that the gamepad is assigned
+    if gamepad is None:
+        raise TypeError("Variable 'gamepad' is None")
 
-print("your gamepad is:",gamepad)
+    print("Gamepad is:", gamepad)
 
-
+main()
