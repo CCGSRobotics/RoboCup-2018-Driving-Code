@@ -99,7 +99,7 @@ for event in controller.gamepad.read_loop():
                 move_left_wheels(-(event_value / 40))
                 move_right_wheels((event_value / 40))
 
-            elif event_code == constants.DPadHoriz:
+            elif event_code == constants.D_PAD_HORIZONTAL:
                 if event_value == 1:
                     ARM.move_pan(direction="increase")
                 elif event_value == -1:
@@ -107,7 +107,7 @@ for event in controller.gamepad.read_loop():
                 elif event_value == 0:
                     ARM.move_pan(direction="neutral")
 
-            elif event_code == constants.DPadVert:
+            elif event_code == constants.D_PAD_VERTICAL:
                 if event_value == -1:
                     ARM.move_tilt(direction="increase")
                 elif event_value == 1:
