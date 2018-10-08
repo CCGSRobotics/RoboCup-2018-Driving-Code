@@ -16,7 +16,7 @@ for dependency in ${DEPENDENCIES[@]}; do
     echo
     echo "program dependency ${dependency} is not installed"
     echo "please install it by executing 'sudo apt-get install ${dependency}'"
-    exit 0
+    exit 1
   else
     echo "successfully loaded module ${dependency}"
   fi
